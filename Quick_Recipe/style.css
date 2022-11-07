@@ -14,6 +14,25 @@ body{
     overflow-x: hidden;
 }
 
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* STYLE FOR SEARCH BAR */
+
+.container{
+    min-height: 100vh;
+}
+
+.search-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
 img{
     display: block;
     width: 50%;
