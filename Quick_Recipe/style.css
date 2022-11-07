@@ -19,7 +19,7 @@ body{
     margin-bottom: 1rem;
 }
 
-/* STYLE FOR SEARCH BAR */
+/* **********************STYLE FOR SEARCH BAR********************* */
 
 .container{
     min-height: 100vh;
@@ -47,7 +47,7 @@ body{
     align-items: stretch;
 }
 
-/* BTN STYLE */
+/* ****************************BTN STYLE************************* */
 
 .btn{
     font-family: inherit;
@@ -96,7 +96,7 @@ body{
     background: #b54507;
 }
 
-/* END OF CODE BTN */
+/* *******************END OF CODE BTN******************************** */
 
 
 img{
