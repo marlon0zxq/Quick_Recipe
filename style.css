@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/foodtable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.meal-search > .title{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* **********************STYLE FOR SEARCH BAR********************* */
+
+.container{
+    min-height: 100vh;
+}
+
+.search-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.meal-search{
+    margin: 2rem 0;
+}
+
+.meal-search cite{
+    font-size: 1rem;
+}
+
+.meal-search-box{
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+
+/* ****************************BTN STYLE************************* */
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  
+  .add-btn:hover {
+    width: 150px;
+  }
+  
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: seagreen;
+  }
+  
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: seagreen;
+    overflow: hidden;
+  }
+  
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+
+.search-control,
+.search-btn{
+    width: 100%;
+}
+
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid #d65108;
+    color: #d65108;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.search-control::placeholder{
+    color: #d65108;
+}
+
+.search-btn{
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    background: #d65108;
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.search-btn:hover{
+    background: #b54507;
+}
+
+/* *******************END OF CODE BTN******************************** */
+
+
+img{
+    display: block;
+    width: 50%;
+    margin: 1.6rem auto 0;
+}
+.details {
+    background-color: yellow;
+    position: relative;
+    margin: -4.3em 00 0;
+    text-align: center;
+    padding: 0.6em 0;
+}
+.details h2{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.details h4{
+    font-size: 1em;
+    font-weight: 400;
+}
+#show-recipe{
+    font-size: 1em;
+    position: relative;
+    left: 50%;
+    padding: 0.9em 0.6em;
+    background-color: royalblue;
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    font-weight: 600;
+}
+#recipe{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 0.6em;
+    display: none;
+}
+#recipe pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+}
+#hide-recipe{
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: red;
+    border: none;
+    top: 1.2em;
+    left: 50%;
+    border-radius: 0.3em; 
+}
+ul{
+    font-size: 1em;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0..8em 1.1em;
+    padding: 1.2em 0 0 1.2em;
+}
+h3{
+    text-align: center;
+}
+
+@media (max-width:500px) {
+    .container {
+        font-size: 14px;
+
+    }
+    
+}
