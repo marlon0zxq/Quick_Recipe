@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* --primary-color: #d65108;
+  --primary-color-dark: #b54507; */
+  --primary-color: #83bf2f;
+  --primary-color-dark: #346421;
+}
+
+body{
+  background-image: url(./images/foodtable.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+.meal-wrapper{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* **********************STYLE FOR SEARCH BAR********************* */
+
+.container{
+  min-height: 100vh;
+}
+
+.search-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.meal-search{
+  margin: 2rem 0;
+}
+
+.meal-search cite{
+  font-size: 1rem;
+}
+
+.meal-search-box{
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ****************************BTN STYLE************************* */
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.add-btn:hover {
+  width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: seagreen;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: seagreen;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.btn{
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  font-size: 1.05rem;
+}
+.text{
+  opacity: 0.8;
+}
+
+.search-control,
+.search-btn{
+  width: 90%;
+}
+
+.search-control{
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: 0;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.search-control::placeholder{
+  color: var(--primary-color);
+}
+
+.search-btn{
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.search-btn:hover{
+  background: var(--primary-color-dark);
+}
+
+.meal-result{
+  margin-top: 4rem;
+}
+#meal{
+  margin: 2.4rem 0;
+}
+.meal-item{
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 2rem 0;
+}
+
+.meal-name{
+  padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+  font-size: 1.4rem;
+}
+
+.recipe-btn{
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 175px;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.recipe-btn:hover{
+  background: var(--primary-color-dark);
+  color: #fff;
+}
+
+.card {
+  display: inline-block;
+}
+
+.notFound{
+  grid-template-columns: 1fr!important;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* Modal Properties */
+.meal-details-content{
+  margin: 2rem;
+}
+
+.recipe-title{
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+.recipe-category{
+  background: #fff;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.recipe-instruct{
+  padding: 1rem 0;
+}
+.recipe-meal-img img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.recipe-link{
+  margin: 1.4rem 0;
+}
+.recipe-link a{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+  opacity: 0.8;
+}
+
+.modal-content
+ {
+  background: var(--primary-color);
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 600px){
+  .meal-search-box{
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  #meal{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+  .meal-item{
+      margin: 0;
+  }
+  .meal-details{
+      width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #meal{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
